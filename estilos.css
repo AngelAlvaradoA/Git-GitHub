@@ -5,10 +5,19 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f3ee;
   color: #3b2f2a;
   line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.titulo {
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 :root {
@@ -54,13 +63,25 @@ body {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(rgba(75, 46, 35, 0.85), rgba(75, 46, 35, 0.85)),
+  background: linear-gradient(135deg, rgba(75, 46, 35, 0.92), rgba(169, 116, 79, 0.75)),
     url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
   color: #fff;
   text-align: center;
-  padding: 90px 20px;
+  padding: 110px 20px;
+}
+
+.hero-badge {
+  display: inline-block;
+  border: 2px solid var(--dorado);
+  color: var(--dorado);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -89,6 +110,23 @@ body {
 .boton:hover {
   background-color: #b3822f;
   transform: translateY(-3px);
+}
+
+.hero-botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boton-secundario {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.boton-secundario:hover {
+  background-color: #fff;
+  color: var(--cafe);
 }
 
 /* ---------- Contenedor ---------- */
@@ -188,15 +226,21 @@ section {
 }
 
 .card-img {
-  background-color: var(--cafe-claro);
+  background: linear-gradient(135deg, var(--cafe-claro), var(--cafe));
   color: #fff;
-  height: 130px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: letter-spacing 0.3s;
+}
+
+.card:hover .card-img {
+  letter-spacing: 4px;
 }
 
 .card h3 {
@@ -270,9 +314,60 @@ section {
 
 /* ---------- Pie ---------- */
 .pie {
-  background-color: var(--cafe);
+  background: linear-gradient(135deg, var(--cafe), #2f1d16);
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   font-size: 0.9rem;
+  border-top: 4px solid var(--dorado);
+}
+
+.pie a {
+  color: var(--dorado);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pie a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero-badge,
+.hero p,
+.hero-botones {
+  animation: aparecer 0.9s ease-out both;
+}
+
+.hero-badge {
+  animation-delay: 0.1s;
+}
+
+.hero h1 {
+  animation-delay: 0.25s;
+}
+
+.hero p {
+  animation-delay: 0.45s;
+}
+
+.hero-botones {
+  animation-delay: 0.65s;
+}
+
+.card,
+.promo {
+  animation: aparecer 0.7s ease-out both;
 }
