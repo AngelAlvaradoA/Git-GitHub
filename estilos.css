@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f3ee;
+  color: #3b2f2a;
+  line-height: 1.6;
+}
+
+:root {
+  --cafe: #4b2e23;
+  --cafe-claro: #a9744f;
+  --crema: #f7f3ee;
+  --dorado: #c9973f;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: var(--cafe);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--dorado);
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 0.95rem;
+}
+
+.menu a:hover {
+  color: var(--dorado);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(rgba(75, 46, 35, 0.85), rgba(75, 46, 35, 0.85)),
+    url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--dorado);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton:hover {
+  background-color: #b3822f;
+  transform: translateY(-3px);
+}
+
+/* ---------- Contenedor ---------- */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: var(--cafe);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.titulo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background-color: var(--dorado);
+  border-radius: 4px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+/* ---------- Productos ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(59, 47, 42, 0.12);
+  transition: transform 0.2s;
+  padding-bottom: 18px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img {
+  background-color: var(--cafe-claro);
+  color: #fff;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card h3 {
+  margin: 16px 18px 6px;
+  color: var(--cafe);
+}
+
+.card p {
+  margin: 0 18px 12px;
+  font-size: 0.92rem;
+  color: #6d5b52;
+}
+
+.precio {
+  display: block;
+  margin: 0 18px;
+  font-weight: bold;
+  color: var(--dorado);
+  font-size: 1.1rem;
+}
+
+/* ---------- Horarios ---------- */
+.tabla {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(59, 47, 42, 0.12);
+}
+
+.tabla th,
+.tabla td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+.tabla thead {
+  background-color: var(--cafe);
+  color: #fff;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: #f1e8df;
+}
+
+.tabla tbody tr:hover {
+  background-color: #eadfd2;
+}
+
+/* ---------- Contacto ---------- */
+.contacto {
+  background-color: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 26px 30px;
+  border-left: 5px solid var(--dorado);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(59, 47, 42, 0.12);
+}
+
+.contacto p {
+  margin-bottom: 10px;
+}
+
+.contacto strong {
+  color: var(--cafe);
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  background-color: var(--cafe);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
