@@ -131,6 +131,7 @@ section {
   padding: 26px;
   position: relative;
   box-shadow: 0 6px 18px rgba(59, 47, 42, 0.25);
+  transition: transform 0.2s;
 }
 
 .promo-tag {
@@ -154,6 +155,10 @@ section {
   font-size: 0.95rem;
   opacity: 0.92;
   margin-bottom: 14px;
+}
+
+.promo:hover {
+  transform: translateY(-6px);
 }
 
 .promo-fecha {
