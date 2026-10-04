@@ -123,6 +123,50 @@ section {
   margin-bottom: 70px;
 }
 
+/* ---------- Promociones ---------- */
+.promo {
+  background: linear-gradient(135deg, #4b2e23, #a9744f);
+  color: #fff;
+  border-radius: 14px;
+  padding: 26px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(59, 47, 42, 0.25);
+  transition: transform 0.2s;
+}
+
+.promo-tag {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  background-color: var(--dorado);
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.promo h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.promo p {
+  font-size: 0.95rem;
+  opacity: 0.92;
+  margin-bottom: 14px;
+}
+
+.promo:hover {
+  transform: translateY(-6px);
+}
+
+.promo-fecha {
+  font-size: 0.8rem;
+  color: #f0dcb9;
+  font-style: italic;
+}
+
 /* ---------- Productos ---------- */
 .grid {
   display: grid;
